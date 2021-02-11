@@ -9,6 +9,7 @@ public class Main {
         Server server = new Server(8080);
         ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
         contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/hello");
+        contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/*");
         HandlerList hList = new HandlerList();
         hList.setHandlers(new Handler[]{ contextHandler });
         server.setHandler(hList);
