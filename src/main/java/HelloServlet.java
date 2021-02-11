@@ -11,6 +11,6 @@ public class HelloServlet extends HttpServlet {
         resp.setStatus(HttpServletResponse.SC_OK);
         System.out.println("Connection. + " + req.getServletPath());
         resp.setContentType("text/html;charset=utf-8");
-        resp.getWriter().println("<h1>hello</h1>>");
+        resp.getWriter().println(String.format("<h1>url = '%s'</h1>", req.getServletPath()));
     }
 }

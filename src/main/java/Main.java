@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
         ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/hello");
         contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/*");
         HandlerList hList = new HandlerList();
         hList.setHandlers(new Handler[]{ contextHandler });
