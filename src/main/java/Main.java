@@ -7,7 +7,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 public class Main {
     public static void main(String[] args) {
-        Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+        Server server = new Server(Integer.parseInt(System.getenv("PORT")));
 
         ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
