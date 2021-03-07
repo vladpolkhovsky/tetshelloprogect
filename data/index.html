@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            Particles.init({
+                selector: '.background',
+                maxParticles: 200,
+                connectParticles: true
+            });
+        };
+    </script>
+    <style>
+        html, body{
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: top;
+            height: 100vh;
+            width: 100vw;
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45%;
+            min-width: 300px;
+            height: 30%;
+            border: 3px ridge black;
+            border-radius: 25px;
+            background-color: #C4C4C499;
+        }
+        .menu h1{
+            text-align: center;
+            list-style-image: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .menu ul{
+            display: inline;
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+        .background {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .center-align li{
+            margin-top: 5px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="center-align">
+            <h1>Вёрстка</h1>
+            <ul>
+                <li id="vladislav"><a href="/vladislav">Полховский Владислав</a></li>
+                <li id="anastasia"><a href="/vladislav">Кохнюк Анастасия</a></li>
+                <li id="valentin"><a href="/vladislav">Калинин Валентин</a></li>
+            </ul>
+        </div>
+    </div>
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+</body>
