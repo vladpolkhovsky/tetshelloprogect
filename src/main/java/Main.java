@@ -17,6 +17,7 @@ public class Main {
 
         contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/");
         contextHandler.addServlet(new ServletHolder(new IndexViewer("vladislav/index.html")), "/vladislav");
+        contextHandler.addServlet(new ServletHolder(new IndexViewer("theyalow/index.html")), "/theyalow");
         HandlerList hList = new HandlerList();
 
         hList.setHandlers(new Handler[]{ resourceHandler, contextHandler });
