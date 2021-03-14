@@ -15,7 +15,7 @@ public class Main {
         ResourceHandler resourceHandler = new ResourceHandler();
         resourceHandler.setResourceBase("data");
 
-        contextHandler.addServlet(new ServletHolder(new HelloServlet()), "/");
+        contextHandler.addServlet(new ServletHolder(new IndexViewer("./index.html")), "/index.html");
         contextHandler.addServlet(new ServletHolder(new IndexViewer("vladislav/index.html")), "/vladislav");
         contextHandler.addServlet(new ServletHolder(new IndexViewer("theyalow/index.html")), "/theyalow");
         HandlerList hList = new HandlerList();

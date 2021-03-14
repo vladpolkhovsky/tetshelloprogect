@@ -13,7 +13,7 @@ a:hover{
 }
 
 nav button:active{
-    background-color: purple;
+    background-color: #800080;
 }
 
 body {
